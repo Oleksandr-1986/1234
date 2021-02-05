@@ -1,2 +1,134 @@
 @import "_normalize";
 @import "_styleNull";
+@import "fonts/Raleway_Heavy/stylesheet";
+
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Lato', sans-serif;
+//font-family: 'Raleway', sans-serif;
+
+html,
+body {
+   font-family: "Lato", sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+}
+img {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   z-index: 2;
+}
+//banner
+
+.wrapper {
+   max-width: 1306px;
+   margin: 0 auto;
+}
+.container {
+   max-width: 1200px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.red {
+   color: #da491c;
+}
+.banner {
+   background-color: #000000;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 580px;
+   &__title {
+      color: #ffffff;
+      font-size: 110px;
+      font-family: "Raleway Heavy", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: -2.75px;
+      max-width: 503px;
+      text-align: center;
+   }
+}
+//content
+
+.content {
+   background-color: #fff;
+   padding: 85px 0;
+}
+.row {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+.posts {
+   flex: 0 1 875px;
+}
+.post {
+   display: flex;
+   justify-content: flex-start;
+   margin-bottom: 40px;
+   &__img {
+      flex: 1 1 275px;
+      height: 248px;
+      position: relative;
+      background-color: #333333;
+   }
+
+   &__nophoto {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: aliceblue;
+      font-size: 30px;
+      z-index: 1;
+   }
+   &__content {
+      flex: 1 1 600px;
+      padding: 22px 0 0 28px;
+      background-color: #f1f1f1;
+   }
+   &__title {
+      color: #333333;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+   }
+
+   &__info {
+      display: flex;
+      justify-content: start;
+      margin-bottom: 20px;
+   }
+
+   &__text {
+      color: #666666;
+      line-height: 30px;
+   }
+}
+.info__item + .info__item {
+   margin-left: 10px;
+}
+.info__item i {
+   margin-right: 10px;
+   color: #333333;
+}
+.date {
+}
+.user {
+}
+.category {
+}
+.tags {
+}
+.sidebar {
+   flex: 0 1 275px;
+   background-color: #f1f1f1;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+   color: white;
+   font-size: 20px !important;
+}
