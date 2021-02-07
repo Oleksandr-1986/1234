@@ -501,6 +501,11 @@ img {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.post:hover {
+  background-color: #f1f1f1;
 }
 
 .post__img {
@@ -510,6 +515,7 @@ img {
   height: 248px;
   position: relative;
   background-color: #333333;
+  margin-right: 28px;
 }
 
 .post__nophoto {
@@ -527,8 +533,7 @@ img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 600px;
           flex: 1 1 600px;
-  padding: 22px 0 0 28px;
-  background-color: #f1f1f1;
+  padding: 22px 0 0 0;
 }
 
 .post__title {
@@ -568,11 +573,111 @@ img {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 275px;
           flex: 0 1 275px;
-  background-color: #f1f1f1;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
   color: white;
   font-size: 20px !important;
+}
+
+.video__bg {
+  background-color: #000;
+  position: relative;
+}
+
+.video__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.video__icon i {
+  color: #fff;
+  font-size: 50px;
+}
+
+.pagination {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pagination__pages {
+  width: 36px;
+  height: 35px;
+  background-color: #333333;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.pagination__pages.active {
+  background-color: #da491c;
+}
+
+.pagination__pages + .pagination__pages {
+  margin-left: 2px;
+}
+
+.pagination__pages a {
+  color: #fff;
+}
+
+#calendar {
+  width: 100%;
+  color: #333333;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  border: 2px;
+  border-color: #888;
+  border: 1px solid rgba(119, 119, 119, 0.473);
+  border-spacing: initial;
+}
+
+#calendar thead tr:first-child {
+  color: #ffffff;
+  font-size: 14px;
+  background-color: #333333;
+  height: 42px;
+  line-height: 42px;
+  border-spacing: 0;
+}
+
+#calendar thead tr:last-child {
+  font-size: small;
+  height: 30px;
+  line-height: 30px;
+}
+
+#calendar thead tr:nth-child(1) td:nth-child(1):hover,
+#calendar thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+}
+
+#calendar thead tr:nth-child(1) td:nth-child(1),
+#calendar thead tr:nth-child(1) td:nth-child(3) {
+  font-size: 30px;
+  letter-spacing: -5px;
+}
+
+#calendar tbody td {
+  width: 42px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #f3f2f2;
+  border: 1px solid #fff;
+}
+
+#calendar tbody td:nth-child(n + 6),
+#calendar .holiday {
+  color: #333333;
+}
+
+#calendar tbody td.today {
+  background-color: #da491c;
+  color: #fff;
 }
