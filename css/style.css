@@ -501,6 +501,7 @@ img {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 40px;
+  min-height: 248px;
   cursor: pointer;
 }
 
@@ -680,4 +681,209 @@ img {
 #calendar tbody td.today {
   background-color: #da491c;
   color: #fff;
+}
+
+.vidget + .vidget {
+  margin-top: 40px;
+}
+
+.vidget.search {
+  color: #333333;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 100%;
+}
+
+.vidget.search label {
+  margin-bottom: 5px;
+}
+
+.vidget.search input {
+  min-width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  color: #999999;
+}
+
+.tabs-nav,
+.tabs1-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabs-nav li:first-child,
+.tabs1-nav li:first-child {
+  width: 117px;
+  height: 43px;
+}
+
+.tabs-nav li:last-child,
+.tabs1-nav li:last-child {
+  width: 156px;
+  height: 43px;
+}
+
+.tabs-nav a,
+.tabs1-nav a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #333333;
+  display: block;
+  text-align: center;
+  line-height: 42px;
+  min-width: 100px;
+  min-height: 100%;
+}
+
+.tabs-nav a.active,
+.tabs1-nav a.active {
+  background-color: #da491c;
+}
+
+.tabs-item ul li a,
+.tabs1-item ul li a {
+  color: #333333;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  border-bottom: 1px solid #333333;
+  display: block;
+}
+
+.tabs-item ul li a:hover,
+.tabs1-item ul li a:hover {
+  background-color: #333333;
+  color: #ffffff;
+  padding-left: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.tabs1-nav li:first-child {
+  width: 93px;
+  height: 43px;
+}
+
+.tabs1-nav li:last-child {
+  width: 93px;
+  height: 43px;
+}
+
+.coments {
+  max-height: 216px;
+  overflow-y: scroll;
+}
+
+.coment + .coment {
+  margin-top: 30px;
+}
+
+.coment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.coment__text {
+  margin-bottom: 5px;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.links a {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 2px;
+  margin: 1px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: Lato;
+  font-weight: 700;
+  background-color: #333333;
+}
+
+.links a:hover {
+  background-color: #da491c;
+}
+
+.card__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 74px;
+          flex: 0 0 74px;
+  height: 74px;
+  margin-right: 15px;
+}
+
+.card__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__text p {
+  color: #333333;
+  font-size: 14px;
+}
+
+.card__badge {
+  background-color: #333333;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  color: #cccccc;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.card + .card {
+  margin-top: 30px;
 }

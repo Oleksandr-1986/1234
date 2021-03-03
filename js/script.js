@@ -72,16 +72,52 @@ function Calendar(id, year, month) {
    document.querySelector('#' + id + ' thead td:nth-child(2)').innerHTML = month[D.getMonth()] + ' ' + D.getFullYear();
    document.querySelector('#' + id + ' thead td:nth-child(2)').dataset.month = D.getMonth();
    document.querySelector('#' + id + ' thead td:nth-child(2)').dataset.year = D.getFullYear();
-   if (document.querySelectorAll('#' + id + ' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+   if (document.querySelectorAll('#' + id + ' tbody tr').length < 6) {  // пустий рядок
       document.querySelector('#' + id + ' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
    }
 }
 Calendar("calendar", new Date().getFullYear(), new Date().getMonth());
-// переключатель минус месяц
+// пмісяць -
 document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(1)').onclick = function () {
    Calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month) - 1);
 }
-// переключатель плюс месяц
+// місяць +
 document.querySelector('#calendar thead tr:nth-child(1) td:nth-child(3)').onclick = function () {
    Calendar("calendar", document.querySelector('#calendar thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar thead td:nth-child(2)').dataset.month) + 1);
 }
+
+//таби
+
+$(function () {
+   let tab = $('.tabs .tabs-items > div');
+   tab.hide().filter(':first').show();
+   // кліки по вкладкам
+   $('.tabs .tabs-nav a').click(function () {
+      tab.hide();
+      tab.filter(this.hash).show();
+      $('.tabs .tabs-nav a').removeClass('active');
+      $(this).addClass('active');
+      return false;
+   }).filter(':first').click();
+   // кліки по якорним ссилкам
+   $('.tabs-target').click(function () {
+      $('.tabs .tabs-nav a[href=' + $(this).data('id') + ']').click();
+   });
+});
+
+$(function () {
+   let tab1 = $('.tabs1 .tabs1-items > div');
+   tab1.hide().filter(':first').show();
+   // кліки по вкладкам
+   $('.tabs1 .tabs1-nav a').click(function () {
+      tab1.hide();
+      tab1.filter(this.hash).show();
+      $('.tabs1 .tabs1-nav a').removeClass('active');
+      $(this).addClass('active');
+      return false;
+   }).filter(':first').click();
+   // кліки по якорним ссилкам
+   $('.tabs1-target').click(function () {
+      $('.tabs1 .tabs1-nav a[href=' + $(this).data('id') + ']').click();
+   });
+});
